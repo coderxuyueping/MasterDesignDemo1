@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <android.support.design.widget.TextInputLayout android:id="@+id/acount_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText android:id="@+id/acount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:hint="输入账号"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout android:id="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:inputType="textPassword"
+            android:hint="输入密码"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <!--counterTextAppearance是统计字数没有超过的时候显示的样式，counterOverflowTextAppearance是超过的样式-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:counterEnabled="true"
+        app:counterTextAppearance="@style/counter"
+        app:counterMaxLength="8"
+        app:counterOverflowTextAppearance="@style/counterOverflow">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:inputType="textPassword"
+            android:hint="统计字数"
+
+          />
+    </android.support.design.widget.TextInputLayout>
+
+    <!--自动匹配提示框-->
+    <android.support.v7.widget.AppCompatAutoCompleteTextView android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="输入城市"
+        android:maxLines="1"
+        android:textColor="#000"
+        android:textColorHint="@color/color_primary"
+        android:textSize="12sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="toNext"
+        android:text="跳"/>
+</LinearLayout>
